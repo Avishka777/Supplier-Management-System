@@ -1,0 +1,78 @@
+.edit-payroll-form-container {
+  display: flex;
+      margin-top:50px;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding: 50px;
+      border-radius: 20px;
+      border: 2px solid #007bff; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+      margin-left: auto;
+      margin-right: auto;
+      width: 950px;
+      background-color: rgb(217, 217, 217);
+}
+
+/* Style form elements */
+.tagline-edit-payroll {
+  font-size: 25px;
+  font-weight: 700;
+  color: #F4780E;
+}
+
+.input-title {
+  text-transform: capitalize;
+    color: #0D6BC2;
+    font-weight: 600;
+    font-size: 20px;
+    align-self: start;
+    padding-top: 10px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  margin-top:8px;
+  outline: none;
+}
+
+.submit-btn {
+  padding: 15px ;
+  width: 150px;
+  outline: none;
+  font-size: 20px;
+  background-color: #0D6BC2;
+  color: #ffffff;
+  border-radius: 25px 0 25px 0;
+  transition: 0.4s;
+  align-items: right;
+  margin-right: 20px;
+}
+
+.reset-btn {
+  padding: 15px ;
+  width: 150px;
+  outline: none;
+  font-size: 20px;
+  background-color: #c20d0d;
+  color: #ffffff;
+  border-radius: 25px 0 25px 0;
+  transition: 0.4s;
+  align-items: right;
+  margin-right: 0px;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  box-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.6);
+}
+
+.reset-btn:hover {
+  cursor: pointer;
+  box-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.6);
+}

@@ -1,0 +1,111 @@
+/* actionbar.scss */
+
+/* actionbar.scss */
+
+.main-ribbon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa; /* Adjust background color */
+    color: #fff; /* Adjust text color */
+    padding: 20px 40px;
+    margin-left: 330px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  }
+  
+  .inventory-management-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0D6BC2;
+    font-family: 'Your Font Family', sans-serif;
+  }
+  
+  .user-details {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #0D6BC2;
+  }
+  
+  .user-image {
+    width: 40px; /* Adjust the image size as needed */
+    height: 40px; /* Adjust the image size as needed */
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .username {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff7a0d;
+  }
+  
+  .designation {
+    font-size: 16px;
+    color: #ff150d;
+  }
+  
+  .logout {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .logout:hover {
+    text-decoration: underline;
+  }
+  
+  /* Add more styles as needed */
+  
+  .user-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-image {
+    width: 40px; /* Adjust the image size as needed */
+    height: 40px; /* Adjust the image size as needed */
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  
+  .logout {
+    background-color: #ff7a0d;
+    border: 1px solid #ffffff; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    padding: 8px 16px; /* Add some padding to the button */
+    transition: background-color 0.3s, color 0.3s, border 0.3s; /* Smooth transition */
+    margin-left: 20px;
+  }
+  
+  .logout:hover {
+    background-color: #ff0303; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+    text-decoration: none;
+    border: 1px solid #0D6BC2; /* Change border color on hover */
+    margin-left: 20px;
+  }
+  
+  
+  /* Add more styles as needed */
+  
