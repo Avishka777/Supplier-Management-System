@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 
-const {getPayroll, getPayrollById, addPayroll, updatePayroll, deletePayroll} = require('../controllers/payrollController')
+const {getPayroll, getPayrollById, addPayroll, updatePayroll, deletePayroll} = require('../controllers/supplierPayrollController')
 
 
 router.get('/', getPayroll)

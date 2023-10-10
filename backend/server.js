@@ -6,7 +6,7 @@ const { errorHandler } = require("./middleware/errorMiddleware");
 const connectDB = require("./config/db");
 
 const supplierRoutes = require('./routes/supplierRoutes');
-const payrollRoutes = require('./routes/payrollRoutes')
+const payrollRoutes = require('./routes/supplierPayrollRoutes')
 const port = process.env.PORT || 4000;
 
 const app = express();

@@ -1,6 +1,6 @@
 const asyncHandler = require('express-async-handler');
 
-const Payroll = require('../models/payrollModel')
+const Payroll = require('../models/supplierPayrollModel')
 
 
 // @desc    Fetch all payrolls
