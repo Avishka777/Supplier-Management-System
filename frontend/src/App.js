@@ -29,8 +29,7 @@ function App() {
 
 
         {/* inventory routes */}
-        <Route path="/admin/inventory/overview" element={<OverviewPage />} />
-       
+               
         <Route path="/admin/inventory/supplier-registration" element={<SupplierRegForm />}/>
         <Route path="/admin/inventory/manage-suppliers" element={<ManageSupplierWindow />}/>
         <Route path="/admin/inventory/report" />
