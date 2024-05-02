@@ -1,33 +1,32 @@
 const mongoose = require("mongoose");
 
-
+// Define schema for payroll
 const payrollSchema = mongoose.Schema({
-   
     orderId: {
         type: String,
         unique: true,
     },
-    itemCode:{
+    itemCode: {
         type: String,
         required: [true, 'Please add item code']
     },
-    single:{
+    single: {
         type: Number,
-        required: [true, 'Please add single qty price']
+        required: [true, 'Please add single quantity price']
     },
-    qty:{
+    qty: {
         type: Number,
         required: [true, 'Please add quantity']
     },
-    quality:{
+    quality: {
         type: Number,
         required: [true, 'Please add quality products']
     },
-    damaged:{
+    damaged: {
         type: Number,
-        required: [true, 'Please add damaged product']
+        required: [true, 'Please add damaged products']
     },
-    deduction:{
+    deduction: {
         type: Number,
         required: [true, 'Please add deduction amount']
     },
@@ -38,18 +37,16 @@ const payrollSchema = mongoose.Schema({
     additional: {
         type: String,
     },
-    
 }, {
     timestamps: true
-})
+});
 
+// Create text indexes for search
 payrollSchema.index({
     orderId: 'text',
     itemCode: 'text',
     single: 'text'
-})
+});
 
-
-
-
+// Export model using the schema
 module.exports = mongoose.model('Payroll', payrollSchema);
