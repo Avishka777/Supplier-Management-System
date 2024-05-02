@@ -1,0 +1,22 @@
+import React from 'react';
+import {GridToolbarDensitySelector, GridToolbarExport, GridToolbarFilterButton, GridToolbarColumnsButton,} from "@mui/x-data-grid";
+
+const CustomToolbar = ({ searchBar, report }) => {
+  return (
+    <div className="customToolbarRoot" style={{ height: '60px', padding: '5px', margin: '15px', display: "flex", justifyContent: 'space-between', alignItems: 'center' }}>
+      {/* Left section of toolbar */}
+      <div className="left" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <GridToolbarColumnsButton />
+        <GridToolbarFilterButton />
+        <GridToolbarDensitySelector />
+        <GridToolbarExport printOptions={{ disableToolbarButton: true }} />
+        {report}
+      </div>
+      <div className="right">
+        {searchBar}
+      </div>
+    </div>
+  );
+};
+
+export default CustomToolbar;

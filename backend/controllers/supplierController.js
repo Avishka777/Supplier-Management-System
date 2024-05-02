@@ -1,94 +1,86 @@
 const asyncHandler = require("express-async-handler");
 const Supplier = require("../models/supplierModel");
 
-// get a single item
+// Get a single supplier by agent ID
 const getSingleSupplier = asyncHandler(async (req, res) => {
-	const ID = req.params.id;
-
-	const singleSupplier = await Supplier.find({ agentID: ID });
-
-	if (!singleSupplier) {
-		res.status(400).json({ message: "no supplier found" });
-	} else {
-		res.status(200).json(singleSupplier);
-	}
+    const ID = req.params.id;
+    const singleSupplier = await Supplier.find({ agentID: ID });
+    if (!singleSupplier) {
+        res.status(400).json({ message: "No supplier found" });
+    } else {
+        res.status(200).json(singleSupplier);
+    }
 });
 
-
-// get a single item by mongo id
+// Get a single supplier by MongoDB ID
 const getSingleSupplierMongo = asyncHandler(async (req, res) => {
-	const mongo = req.params.id;
-
-	const getSingleSupplier = await Supplier.findById(mongo);
-
-	if (!getSingleSupplier) {
-		res.status(400).json({ message: "no supplier found" });
-	} else {
-		res.status(200).json(getSingleSupplier);
-	}
+    const mongo = req.params.id;
+    const singleSupplier = await Supplier.findById(mongo);
+    if (!singleSupplier) {
+        res.status(400).json({ message: "No supplier found" });
+    } else {
+        res.status(200).json(singleSupplier);
+    }
 });
 
-
-
-// get all items
+// Get all suppliers sorted by creation date
 const getAllSuppliers = asyncHandler(async (req, res) => {
-	const getAllSuppliers = await Supplier.find({}).sort({ createdAt: -1 });
-
-	if (getAllSuppliers) {
-		res.json(getAllSuppliers);
-	} else {
-		res.json({ message: "no items in the inventory" });
-	}
+    const allSuppliers = await Supplier.find({}).sort({ createdAt: -1 });
+    if (allSuppliers.length > 0) {
+        res.json(allSuppliers);
+    } else {
+        res.json({ message: "No items in the inventory" });
+    }
 });
 
-// create single item
+// Register a new supplier
 const registerSupplier = asyncHandler(async (req, res) => {
-
-	const sample = ({
-		companyName,
-		businessType,
-		agentName,
-		agentID,
-		supplierCategory,
-		supplyingItem,
-		email,
-		phone,
-		companyAddress,
-
-	} = req.body);
-
-	const regSupplier = await Supplier.create(sample);
-
-	res.json(regSupplier);
+    const {
+        companyName,
+        businessType,
+        agentName,
+        agentID,
+        supplierCategory,
+        supplyingItem,
+        email,
+        phone,
+        companyAddress,
+    } = req.body;
+    const newSupplier = await Supplier.create({
+        companyName,
+        businessType,
+        agentName,
+        agentID,
+        supplierCategory,
+        supplyingItem,
+        email,
+        phone,
+        companyAddress,
+    });
+    res.json(newSupplier);
 });
 
-// update a single item
+// Update a single supplier
 const updateSingleSupplier = asyncHandler(async (req, res) => {
-	const mongoID = req.params.id;
-	const requestedSupplier = await Supplier.findByIdAndUpdate(mongoID,req.body,{new:true});
-
-	if (!requestedSupplier) {
-		res.status(404);
-		throw new Error("Item not existing");
-	} else {
-		res.status(202).json(requestedSupplier);
-	}
+    const mongoID = req.params.id;
+    const updatedSupplier = await Supplier.findByIdAndUpdate(mongoID, req.body, { new: true });
+    if (!updatedSupplier) {
+        res.status(404);
+        throw new Error("Supplier not found");
+    } else {
+        res.status(202).json(updatedSupplier);
+    }
 });
 
-// delete a single item
+// Delete a single supplier
 const deleteSingleSupplier = asyncHandler(async (req, res) => {
-	const id = req.params.id;
-	await Item.findByIdAndDelete(id);
-  
-	// Set the response status and send JSON response
-	res.status(200).json({ message: "Item was deleted from the database" });
-  });
-  
-
-
+    const id = req.params.id;
+    await Supplier.findByIdAndDelete(id);
+    res.status(200).json({ message: "Supplier deleted from the database" });
+});
 
 module.exports = {
-	deleteSingleSupplier,
+    deleteSingleSupplier,
     updateSingleSupplier,
     registerSupplier,
     getAllSuppliers,

@@ -1,52 +1,44 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
+// Define schema for supplier
 const supplierSchema = mongoose.Schema({
-    companyName:{
+    companyName: {
         type: String,
         required: true
     },
-
-    businessType:{
+    businessType: {
         type: String,
         required: true
     },
-
-    agentName:{
+    agentName: {
         type: String,
         required: true
     },
-
-    agentID:{
+    agentID: {
         type: String,
         required: true
     },
-
-    supplierCategory:{
+    supplierCategory: {
         type: String,
         required: true
     },
-
-    supplyingItem:{
+    supplyingItem: {
         type: String,
         required: true
     },
-
-    email:{
+    email: {
         type: String,
         required: true
     },
-
-    phone:{
-        type:String,
+    phone: {
+        type: String,
         required: true
     },
-
-    companyAddress:{
-        type:String,
+    companyAddress: {
+        type: String,
         required: true
     }
+}, { timestamps: true });
 
-},{timestamps:true})
-
-
-module.exports = mongoose.model('supplier',supplierSchema)
+// Export model using the schema
+module.exports = mongoose.model('Supplier', supplierSchema);
