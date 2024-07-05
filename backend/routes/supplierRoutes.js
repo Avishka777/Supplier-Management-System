@@ -1,14 +1,33 @@
 const express = require("express");
-const { getSingleSupplier, getSingleSupplierMongo, getAllSuppliers, updateSingleSupplier, deleteSingleSupplier, registerSupplier } = require("../controllers/supplierController");
+const {
+	getSingleSupplier,
+    getSingleSupplierMongo,
+    getAllSuppliers,
+    updateSingleSupplier,
+    deleteSingleSupplier,
+    registerSupplier
+} = require("../controllers/supplierController");
 
 const router = express.Router();
 
-// Routes for supplier operations
-router.get("/", getAllSuppliers); // Get all suppliers
-router.get("/:id", getSingleSupplier); // Get single supplier by ID
-router.post("/", registerSupplier); // Register a new supplier
-router.put("/:id", updateSingleSupplier); // Update single supplier by ID
-router.delete("/:id", deleteSingleSupplier); // Delete single supplier by ID
-router.get("/mongo/:id", getSingleSupplierMongo); // Get single supplier by MongoDB ID
+// get all the suppliers from the database
+router.get("/", getAllSuppliers);
+
+// get a single supplier from the database
+router.get("/:id", getSingleSupplier);
+
+// register a suppleir
+router.post("/", registerSupplier);
+
+//update a single item
+router.put("/:id", updateSingleSupplier);
+
+// delete a single item
+router.delete("/:id", deleteSingleSupplier);
+
+// get single item from mongID
+router.get("/mongo/:id",getSingleSupplierMongo)
+
+// exporting the express router
 
 module.exports = router;

@@ -1,0 +1,126 @@
+/* sidebar.scss */
+
+.sidebar-container {
+	width: 330px;
+	background-image: linear-gradient(to right, #0D6BC2, #052646);
+	color: #fff;
+	padding-top: 20px;
+	position: fixed;
+	height: 100%;
+	transition: width 0.3s;
+	font-family: Arial, sans-serif; /* Add your desired font family */
+  }
+  
+  .brandName {
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+	font-size: 24px; /* Increase font size for the brand name */
+	font-weight: bold;
+	color: #CCAF31;
+	margin-Top: "35px";
+  }
+  
+  .brandFront {
+	margin-left: 10px;
+	color: #CCAF31;
+	margin-Top: "35px";
+  }
+  
+  .side-bar-item-container {
+	margin-top: 80px;
+  }
+  
+.side-bar-item-container {
+	margin-top: 50px;
+  }
+  
+  .mainFunctionAssets {
+	margin-bottom: 15px;
+  }
+  
+  .mainFunction {
+	padding: 0.75em 1em;
+	display: block;
+	align-items: flex-start;
+	cursor:pointer;
+	transition: background-color 0.2s;
+
+  }
+  
+  .mainFunction:hover {
+	box-shadow: -5px 0px 10px rgba(255, 255, 255, 0.5);
+	border-top-left-radius: 5px; /* Top-left corner */
+  	border-bottom-right-radius: 5px; /* Bottom-right corner */
+  }
+  
+  .functionPrompt {
+	display: flex;
+	align-items: center;
+  }
+  
+  .mainFuncItemName {
+	cursor: pointer;
+	font-size: 22px; /* Adjust font size for item names */
+	margin-top: 5px; /* Add some spacing between items */
+	margin-left: 15px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	font-family: "Fantasy", "Helvetica", sans-serif;
+  }
+
+  
+  
+  .scrollFuncIcon {
+	margin-left: auto;
+	transition: transform 0.2s;
+	
+  }
+  
+  .scroll-function-show {
+	transform: rotate(90deg);
+  }
+  
+  .nested-function-container {
+	display: none;
+	flex-direction: column;
+	margin-left: 40px;
+	padding: 10px 0;
+
+  }
+  
+  .cont-show {
+	display: block;
+  }
+  
+  .side-bar-nested-item {
+	padding: 5px 0;
+	color: #e2e2e2;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	font-size: 20px; /* Adjust font size for nested items */
+	margin-left: 40px;
+	margin-top: 15px;
+	
+  }
+  
+  .active-nested-item {
+	padding: 5px 0;
+	color: orange;
+	border-top-left-radius: 5px; /* Top-left corner */
+  	border-bottom-right-radius: 5px; /* Bottom-right corner */
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	font-size: 20px; /* Adjust font size for nested items */
+	margin-left: 40px;
+	margin-top: 15px;
+  }
+  
+  .icon {
+	margin-right: 10px;
+	font-size: 20px;
+  }
+  
+  
