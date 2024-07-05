@@ -81,8 +81,14 @@ function SupplierRegistration() {
   return (
     <AdminLayout>
       <div className=".add-supplier-form-container">
-        <form className="add-supplier-form-container" onSubmit={addSupplierFormHandler}>
-          <span className="tagline-add-supplier">ADD SUPPLIER REGISTRATION</span><hr></hr>
+        <form
+          className="add-supplier-form-container"
+          onSubmit={addSupplierFormHandler}
+        >
+          <span className="tagline-add-supplier">
+            ADD SUPPLIER REGISTRATION
+          </span>
+          <hr></hr>
           <div className="column-container">
             <div className="add-supplier-column">
               <span className="input-title">Company Name :</span>
@@ -93,7 +99,7 @@ function SupplierRegistration() {
                 onChange={addSupplierInputHandler}
               />
 
-			<span className="input-title">Agent Name :</span>
+              <span className="input-title">Agent Name :</span>
               <input
                 className="input-field"
                 value={formData.agentName}
@@ -103,13 +109,13 @@ function SupplierRegistration() {
                 title="Please Enter a Valid Agent Name (No Numbers)"
               />
 
-			<span className="input-title">Agent ID :</span>
+              <span className="input-title">Agent ID :</span>
               <input
                 className="input-field"
                 value={formData.agentID}
                 name="agentID"
                 onChange={addSupplierInputHandler}
-              />              
+              />
 
               <span className="input-title">Email :</span>
               <input
@@ -153,16 +159,16 @@ function SupplierRegistration() {
                   -- Select Business Type --
                 </option>
                 <option className="select-option" value="Manufacturers">
-				        Manufacturers
+                  Manufacturers
                 </option>
                 <option className="select-option" value="Distributors">
-                Distributors
-                        </option>
+                  Distributors
+                </option>
                 <option className="select-option" value="Wholesalers">
-                Wholesalers
-                        </option>
+                  Wholesalers
+                </option>
                 <option className="select-option" value="3rd">
-                Third-Party Logistics Providers
+                  Third-Party Logistics Providers
                 </option>
               </select>
 
@@ -180,18 +186,17 @@ function SupplierRegistration() {
                   Asus
                 </option>
                 <option className="select-option" value="Dell">
-                          Dell
-                        </option>
-                <option className="select-option" value="HP">
-                          HP
-                        </option>
-                <option className="select-option" value="Lenovo">
-                          Lenovo
-                        </option>
-                <option className="select-option" value="Apple">
-                          Apple
+                  Dell
                 </option>
-               
+                <option className="select-option" value="HP">
+                  HP
+                </option>
+                <option className="select-option" value="Lenovo">
+                  Lenovo
+                </option>
+                <option className="select-option" value="Apple">
+                  Apple
+                </option>
               </select>
 
               <span className="input-title">Supplying Products :</span>
@@ -208,18 +213,17 @@ function SupplierRegistration() {
                   Computers
                 </option>
                 <option className="select-option" value="Laptop">
-                          Laptop
-                        </option>
-                <option className="select-option" value="Monitors">
-                          Monitors
-                        </option>
-                <option className="select-option" value="Printers">
-                          Printers
-                        </option>
-                <option className="select-option" value="Software">
-                          Software
+                  Laptop
                 </option>
-                
+                <option className="select-option" value="Monitors">
+                  Monitors
+                </option>
+                <option className="select-option" value="Printers">
+                  Printers
+                </option>
+                <option className="select-option" value="Software">
+                  Software
+                </option>
               </select>
 
               <div className="btn-container-add-item">

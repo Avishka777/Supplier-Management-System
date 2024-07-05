@@ -1,27 +1,39 @@
 import {
-    GridToolbarDensitySelector,
-    GridToolbarContainer,
-    GridToolbarExport,
-    GridToolbarFilterButton,
-    GridToolbarColumnsButton,
-  } from "@mui/x-data-grid";
+  GridToolbarDensitySelector,
+  GridToolbarContainer,
+  GridToolbarExport,
+  GridToolbarFilterButton,
+  GridToolbarColumnsButton,
+} from "@mui/x-data-grid";
 
-
-const CustomToolbar = ({searchBar, report}) => {
-
-
+const CustomToolbar = ({ searchBar, report }) => {
   return (
-    <div className="customToolbarRoot" style={{height: '60px', padding: '5px',margin:'15px', display: "flex", justifyContent: 'space-between', alignItems: 'center' }}>
-      <div className="left" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-      <GridToolbarColumnsButton/>
-      <GridToolbarFilterButton />
-      <GridToolbarDensitySelector />
-      <GridToolbarExport printOptions= {{ disableToolbarButton: true }} />
-      {report}
+    <div
+      className="customToolbarRoot"
+      style={{
+        height: "60px",
+        padding: "5px",
+        margin: "15px",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+      }}
+    >
+      <div
+        className="left"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <GridToolbarColumnsButton />
+        <GridToolbarFilterButton />
+        <GridToolbarDensitySelector />
+        <GridToolbarExport printOptions={{ disableToolbarButton: true }} />
+        {report}
       </div>
-      <div className="right">
-        {searchBar}
-      </div>
+      <div className="right">{searchBar}</div>
     </div>
   );
 };

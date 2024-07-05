@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import AdminLayout from '../../../Layouts/AdminLayout';
-import swal from 'sweetalert2';
-import api from '../../../../services/supplierAPI';
-import './update-supplier.scss';
-import Swal from 'sweetalert2';
+import React, { useEffect, useState } from "react";
+import AdminLayout from "../../../Layouts/AdminLayout";
+import swal from "sweetalert2";
+import api from "../../../../services/supplierAPI";
+import "./update-supplier.scss";
+import Swal from "sweetalert2";
 
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from "react-router-dom";
 
 function UpdateSupplierDetails() {
   const navigate = useNavigate();
@@ -21,16 +21,16 @@ function UpdateSupplierDetails() {
   }, []);
 
   const [updateSupplierFormData, setUpdateSupplierFormData] = useState({
-    _id: '',
-    companyName: '',
-    businessType: '',
-    agentName: '',
-    agentID: '',
-    supplierCategory: '',
-    supplyingItem: '',
-    email: '',
-    phone: '',
-    companyAddress: '',
+    _id: "",
+    companyName: "",
+    businessType: "",
+    agentName: "",
+    agentID: "",
+    supplierCategory: "",
+    supplyingItem: "",
+    email: "",
+    phone: "",
+    companyAddress: "",
   });
 
   const updateSupplierFormHandler = (event) => {
@@ -41,24 +41,24 @@ function UpdateSupplierDetails() {
       .then((response) => {
         if (response) {
           Swal.fire({
-            icon: 'success',
-            iconColor: '#0D6BC2',
-            title: 'Supplier Details Updated',
-            text: 'Changes are made to the supplier!',
+            icon: "success",
+            iconColor: "#0D6BC2",
+            title: "Supplier Details Updated",
+            text: "Changes are made to the supplier!",
           });
         }
       })
       .catch((error) => {
         Swal.fire({
-          icon: 'error',
-          iconColor: '#0D6BC2',
-          title: 'Unsuccessful',
-          text: 'Please check again!',
+          icon: "error",
+          iconColor: "#0D6BC2",
+          title: "Unsuccessful",
+          text: "Please check again!",
         });
         console.log(error);
       });
 
-    navigate('/admin/inventory/manage-suppliers');
+    navigate("/admin/inventory/manage-suppliers");
   };
 
   const updateSupplierInputHandler = (event) => {
@@ -69,7 +69,7 @@ function UpdateSupplierDetails() {
   };
 
   const backBtn = () => {
-    navigate('/admin/inventory/manage-inventory');
+    navigate("/admin/inventory/manage-inventory");
   };
 
   return (
@@ -80,9 +80,8 @@ function UpdateSupplierDetails() {
           className="add-supplier-form-container"
           onSubmit={updateSupplierFormHandler}
         >
-          <span className="tagline-add-supplier">
-            UPDATE SUPPLIER DETAILS
-          </span><hr></hr>
+          <span className="tagline-add-supplier">UPDATE SUPPLIER DETAILS</span>
+          <hr></hr>
           {/* input field container */}
           <div className="column-container">
             {/* column one */}
@@ -235,7 +234,7 @@ function UpdateSupplierDetails() {
                   type="reset"
                   className="reset-btn"
                   onClick={() => {
-                    navigate('/admin/inventory/manage-suppliers');
+                    navigate("/admin/inventory/manage-suppliers");
                   }}
                 >
                   Back
